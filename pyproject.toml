@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emotion-nlp"
+version = "0.1.0"
+description = "Duke ECE Data Science – Emotion Classification (Final Project)"
+authors = [
+  { name = "Duke ECE Data Science Team"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/xiaohuang-6/NLP_emotional_classification"
+
+[project.scripts]
+emotion-nlp = "emotion_nlp.train:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["emotion_nlp*"]
+
